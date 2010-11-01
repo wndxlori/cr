@@ -1,0 +1,3126 @@
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 13:46:10 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlayer Load (37.1ms)[0m  SELECT "players".* FROM "players"
+Rendered players/index.html.erb within layouts/application (1609.7ms)
+Completed 200 OK in 1812ms (Views: 1615.1ms | ActiveRecord: 37.6ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2010-10-15 13:46:22 -0600
+  Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 1) LIMIT 1[0m
+Rendered players/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 22ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 13:46:24 -0600
+  Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (54.4ms)[0m  SELECT "players".* FROM "players"
+Rendered players/index.html.erb within layouts/application (1742.8ms)
+Completed 200 OK in 1842ms (Views: 1746.4ms | ActiveRecord: 54.4ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-15 14:17:05 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (4.3ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (72.3ms)
+Completed 200 OK in 178ms (Views: 76.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 14:19:39 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlayer Load (52.8ms)[0m  SELECT "players".* FROM "players"
+Rendered players/index.html.erb within layouts/application (1618.4ms)
+Completed 200 OK in 1804ms (Views: 1622.4ms | ActiveRecord: 53.3ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-15 14:20:25 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (4.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (88.7ms)
+Completed 200 OK in 113ms (Views: 92.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/teams/1/edit" for 127.0.0.1 at 2010-10-15 14:20:31 -0600
+  Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams" WHERE ("teams"."id" = 1) LIMIT 1
+Rendered teams/_form.html.erb (18.1ms)
+Rendered teams/edit.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 38ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-15 14:20:34 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 59ms (Views: 46.0ms | ActiveRecord: 3.6ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (3.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (2.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_info"[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('3')[0m
+  [1m[35mSQL (1.4ms)[0m  DROP TABLE "schema_info"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("players")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("teams")
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.8ms)[0m  CREATE TABLE "players" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sur_name" varchar(255), "given_name" varchar(255), "position" varchar(255), "team_abbreviation" varchar(255), "birth_date" date, "place_of_birth" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (4.4ms)[0m  CREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "abbreviation" varchar(255), "hometown" varchar(255), "created_at" datetime, "updated_at" datetime, "latitude" float, "longitude" float) 
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('3')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE "players" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sur_name" varchar(255), "given_name" varchar(255), "position" varchar(255), "team_abbreviation" varchar(255), "birth_date" date, "place_of_birth" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "abbreviation" varchar(255), "hometown" varchar(255), "created_at" datetime, "updated_at" datetime, "latitude" float, "longitude" float) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('3')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-15 14:51:02 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (5.0ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (75.4ms)
+Completed 200 OK in 211ms (Views: 79.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-15 14:53:57 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (4.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (85.8ms)
+Completed 200 OK in 102ms (Views: 89.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 14:54:06 -0600
+  Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (55.3ms)[0m  SELECT "players".* FROM "players"
+Rendered players/index.html.erb within layouts/application (1807.4ms)
+Completed 200 OK in 1910ms (Views: 1812.1ms | ActiveRecord: 55.3ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-15 14:54:14 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (4.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 77ms (Views: 59.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-15 15:14:50 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (4.3ms)[0m  SELECT "teams".* FROM "teams"
+Completed   in 142ms
+
+ActionView::MissingTemplate (Missing layout layouts/teams with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/lori/Projects/powerux/app/views"):
+  app/controllers/teams_controller.rb:15:in `index'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-15 15:16:16 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Completed   in 15ms
+
+NoMethodError (You specified nil as the layout, but no such method was found):
+  app/controllers/teams_controller.rb:15:in `index'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.4ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-15 15:16:18 -0600
+  Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (10.4ms)[0m  SELECT "teams".* FROM "teams"
+Completed   in 25ms
+
+NoMethodError (You specified nil as the layout, but no such method was found):
+  app/controllers/teams_controller.rb:15:in `index'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.9ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-15 15:16:20 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Completed   in 14ms
+
+NoMethodError (You specified nil as the layout, but no such method was found):
+  app/controllers/teams_controller.rb:15:in `index'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.4ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-15 15:16:39 -0600
+  Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 97ms (Views: 50.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-15 15:16:45 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (31.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 90ms (Views: 49.9ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/teams/locate" for 127.0.0.1 at 2010-10-15 15:16:53 -0600
+  Processing by TeamsController#locate as HTML
+Completed   in 4ms
+
+NameError (uninitialized constant TeamsController::GMap):
+  app/controllers/teams_controller.rb:5:in `locate'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started GET "/teams/locate" for 127.0.0.1 at 2010-10-15 15:19:42 -0600
+  Processing by TeamsController#locate as HTML
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (1.0ms)[0m  SELECT name, latitude, longitude FROM "teams"
+DEPRECATION WARNING: ActionController::Base.relative_url_root is ineffective. Please stop using it. (called from header at /Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)
+Rendered teams/locate.html.erb (20.8ms)
+Completed   in 144ms
+
+ActionView::Template::Error (can't convert Ym4r::GmPlugin::Variable to String (Ym4r::GmPlugin::Variable#to_str gives Ym4r::GmPlugin::Variable)):
+    3:         <%= stylesheet_link_tag 'application' %>
+    4:         <title>Team Locations</title>
+    5:         <%= GMap.header %>
+    6:         <%= @map.to_html %>
+    7:     </head>
+    8:     <body>
+    9:         <%= @map.div(:width => 900, :height => 600 ) %>
+  app/views/teams/locate.html.erb:6:in `_app_views_teams_locate_html_erb___3695829345967791381_2181645100_2012136816775231438'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/teams/locate" for 127.0.0.1 at 2010-10-15 15:23:31 -0600
+  Processing by TeamsController#locate as HTML
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (1.6ms)[0m  SELECT name, latitude, longitude FROM "teams"
+DEPRECATION WARNING: ActionController::Base.relative_url_root is ineffective. Please stop using it. (called from header at /Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)
+Rendered teams/locate.html.erb (2.2ms)
+Completed 200 OK in 168ms (Views: 5.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2010-10-15 15:23:32 -0600
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/teams/locate" for 127.0.0.1 at 2010-10-15 15:33:26 -0600
+  Processing by TeamsController#locate as HTML
+  [1m[36mTeam Load (1.2ms)[0m  [1mSELECT name, latitude, longitude FROM "teams"[0m
+DEPRECATION WARNING: ActionController::Base.relative_url_root is ineffective. Please stop using it. (called from header at /Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)
+Rendered teams/locate.html.erb (1.1ms)
+Completed 200 OK in 22ms (Views: 2.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2010-10-15 15:33:26 -0600
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js" for 127.0.0.1 at 2010-10-15 15:33:26 -0600
+
+ActionController::RoutingError (No route matches "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js" for 127.0.0.1 at 2010-10-15 15:33:26 -0600
+
+ActionController::RoutingError (No route matches "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/teams/locate" for 127.0.0.1 at 2010-10-15 15:36:59 -0600
+  Processing by TeamsController#locate as HTML
+  [1m[35mTeam Load (2.0ms)[0m  SELECT name, latitude, longitude FROM "teams"
+DEPRECATION WARNING: ActionController::Base.relative_url_root is ineffective. Please stop using it. (called from header at /Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)
+Rendered teams/locate.html.erb (46.8ms)
+Completed 200 OK in 71ms (Views: 48.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2010-10-15 15:36:59 -0600
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js" for 127.0.0.1 at 2010-10-15 15:36:59 -0600
+
+ActionController::RoutingError (No route matches "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js" for 127.0.0.1 at 2010-10-15 15:37:00 -0600
+
+ActionController::RoutingError (No route matches "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/teams/locate" for 127.0.0.1 at 2010-10-15 15:37:01 -0600
+  Processing by TeamsController#locate as HTML
+  [1m[36mTeam Load (0.8ms)[0m  [1mSELECT name, latitude, longitude FROM "teams"[0m
+DEPRECATION WARNING: ActionController::Base.relative_url_root is ineffective. Please stop using it. (called from header at /Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)
+Rendered teams/locate.html.erb (1.2ms)
+Completed 200 OK in 22ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2010-10-15 15:37:01 -0600
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js" for 127.0.0.1 at 2010-10-15 15:37:01 -0600
+
+ActionController::RoutingError (No route matches "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js" for 127.0.0.1 at 2010-10-15 15:37:02 -0600
+
+ActionController::RoutingError (No route matches "/teams/DEPRECATION%20WARNING:%20ActionController::Base.relative_url_root%20is%20ineffective.%20Please%20stop%20using%20it.%20(called%20from%20header%20at%20/Users/lori/Projects/powerux/vendor/plugins/ym4r_gm/lib/gm_plugin/map.rb:37)/javascripts/ym4r-gm.js"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/teams/locate" for 127.0.0.1 at 2010-10-15 15:37:24 -0600
+  Processing by TeamsController#locate as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (0.5ms)[0m  SELECT name, latitude, longitude FROM "teams"
+Rendered teams/locate.html.erb (1.1ms)
+Completed 200 OK in 114ms (Views: 2.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2010-10-15 15:37:25 -0600
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-15 15:40:43 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (4.1ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (79.6ms)
+Completed 200 OK in 98ms (Views: 82.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 15:40:45 -0600
+  Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (68.6ms)[0m  SELECT "players".* FROM "players"
+Rendered players/index.html.erb within layouts/application (1654.0ms)
+Completed 200 OK in 1773ms (Views: 1658.7ms | ActiveRecord: 68.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 15:41:45 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (74.1ms)[0m  [1mSELECT "players".* FROM "players"[0m
+Rendered players/index.html.erb within layouts/application (4301.0ms)
+Completed   in 4422ms
+
+ActionView::Template::Error (undefined local variable or method `teams_locate_path' for #<#<Class:0x0000010330b2c8>:0x00000103309680>):
+    11: 		<ul>
+    12: 			<li><%= link_to "Teams", teams_path %> </li>
+    13: 			<li><%= link_to "Players", players_path %> </li>
+    14: 			<li><%= link_to "Team Locations", teams_locate_path %> </li>
+    15: 		</ul>
+    16: 	</nav>
+    17: 
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__2667586837360425825_2174237320__542835623878100379'
+  app/controllers/players_controller.rb:7:in `index'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (365.7ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (375.1ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 15:54:48 -0600
+  Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (73.8ms)[0m  SELECT "players".* FROM "players"
+Rendered players/index.html.erb within layouts/application (1728.9ms)
+Completed 200 OK in 1856ms (Views: 1734.8ms | ActiveRecord: 73.8ms)
+
+
+Started GET "/teams/locate" for 127.0.0.1 at 2010-10-15 15:54:55 -0600
+  Processing by TeamsController#locate as HTML
+  [1m[36mTeam Load (0.8ms)[0m  [1mSELECT name, latitude, longitude FROM "teams"[0m
+Rendered teams/locate.html.erb (2.0ms)
+Completed 200 OK in 77ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2010-10-15 15:54:55 -0600
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-15 15:55:00 -0600
+  Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 53ms (Views: 39.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 15:55:05 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (23.3ms)[0m  [1mSELECT "players".* FROM "players"[0m
+Rendered players/index.html.erb within layouts/application (2077.2ms)
+Completed 200 OK in 2157ms (Views: 2083.8ms | ActiveRecord: 23.3ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.8ms)[0m  CREATE TABLE "players" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sur_name" varchar(255), "given_name" varchar(255), "position" varchar(255), "team_abbreviation" varchar(255), "birth_date" date, "place_of_birth" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "abbreviation" varchar(255), "hometown" varchar(255), "created_at" datetime, "updated_at" datetime, "latitude" float, "longitude" float) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('3')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE TABLE "players" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sur_name" varchar(255), "given_name" varchar(255), "position" varchar(255), "team_abbreviation" varchar(255), "birth_date" date, "place_of_birth" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "abbreviation" varchar(255), "hometown" varchar(255), "created_at" datetime, "updated_at" datetime, "latitude" float, "longitude" float) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('3')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-22 12:03:56 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (34.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 134ms (Views: 42.4ms | ActiveRecord: 35.3ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-22 12:04:01 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (22.8ms)[0m  [1mSELECT "players".* FROM "players"[0m
+Rendered players/index.html.erb within layouts/application (1443.9ms)
+Completed 200 OK in 1552ms (Views: 1448.6ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 12:04:30 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/_form.html.erb (29.7ms)
+Rendered players/edit.html.erb within layouts/application (31.1ms)
+Completed   in 46ms
+
+ActionView::Template::Error (No route matches {:action=>"auto_complete_for_post_title", :controller=>"players"}):
+    24:     <%= f.text_field :position %>
+    25:   </div>
+    26:   <div class="field">
+    27:     <%= text_field_with_auto_complete :post, :title, :limit => 50 %>
+    28:   </div>
+    29:   <div class="field">
+    30:     <%= f.label :team_abbreviation %><br />
+  app/views/players/_form.html.erb:27:in `block in _app_views_players__form_html_erb___2690437706472869101_2159650920__395047451615813814'
+  app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb___2690437706472869101_2159650920__395047451615813814'
+  app/views/players/edit.html.erb:3:in `_app_views_players_edit_html_erb__3292453170249520033_2159661300__4182302167224251011'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (44.0ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (52.4ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 12:05:24 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1[0m
+Rendered players/_form.html.erb (10.2ms)
+Rendered players/edit.html.erb within layouts/application (11.6ms)
+Completed   in 27ms
+
+ActionView::Template::Error (No route matches {:action=>"auto_complete_for_team_name", :controller=>"players"}):
+    24:     <%= f.text_field :position %>
+    25:   </div>
+    26:   <div class="field">
+    27:     <%= text_field_with_auto_complete :team, :name, :limit => 50 %>
+    28:   </div>
+    29:   <div class="field">
+    30:     <%= f.label :team_abbreviation %><br />
+  app/views/players/_form.html.erb:27:in `block in _app_views_players__form_html_erb___2690437706472869101_2168752360__395047451615813814'
+  app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb___2690437706472869101_2168752360__395047451615813814'
+  app/views/players/edit.html.erb:3:in `_app_views_players_edit_html_erb__3292453170249520033_2168794400__4182302167224251011'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 12:05:42 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/_form.html.erb (9.8ms)
+Rendered players/edit.html.erb within layouts/application (11.1ms)
+Completed   in 26ms
+
+ActionView::Template::Error (No route matches {:action=>"auto_complete_for_team_name", :controller=>"players"}):
+    24:     <%= f.text_field :position %>
+    25:   </div>
+    26:   <div class="field">
+    27:     <%= text_field_with_auto_complete :team, :name, :limit => 50 %>
+    28:   </div>
+    29:   <div class="field">
+    30:     <%= f.label :team_abbreviation %><br />
+  app/views/players/_form.html.erb:27:in `block in _app_views_players__form_html_erb___2690437706472869101_2159070440__395047451615813814'
+  app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb___2690437706472869101_2159070440__395047451615813814'
+  app/views/players/edit.html.erb:3:in `_app_views_players_edit_html_erb__3292453170249520033_2159080200__4182302167224251011'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 12:11:31 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/_form.html.erb (70.9ms)
+Rendered players/edit.html.erb within layouts/application (72.6ms)
+Completed   in 142ms
+
+ActionView::Template::Error (No route matches {:action=>"auto_complete_for_team_name", :controller=>"players"}):
+    24:     <%= f.text_field :position %>
+    25:   </div>
+    26:   <div class="field">
+    27:     <%= text_field_with_auto_complete :team, :name, :limit => 50 %>
+    28:   </div>
+    29:   <div class="field">
+    30:     <%= f.label :team_abbreviation %><br />
+  app/views/players/_form.html.erb:27:in `block in _app_views_players__form_html_erb__1446597143276522174_2152444820__3899973350300924699'
+  app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb__1446597143276522174_2152444820__3899973350300924699'
+  app/views/players/edit.html.erb:3:in `_app_views_players_edit_html_erb___2913604435714867747_2152435380__506601393620212741'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 12:24:04 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1[0m
+Rendered players/_form.html.erb (13.7ms)
+Rendered players/edit.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 49ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auto_complete_for_team_name?team%5Bname%5D=C" for 127.0.0.1 at 2010-10-22 12:24:11 -0600
+
+ActionController::RoutingError (No route matches "/auto_complete_for_team_name"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 12:24:50 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/_form.html.erb (12.5ms)
+Rendered players/edit.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 32ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/auto_complete_for_team_name?team%5Bname%5D=h" for 127.0.0.1 at 2010-10-22 12:24:58 -0600
+  Processing by PlayersController#show as JS
+  Parameters: {"team"=>{"name"=>"h"}, "id"=>"auto_complete_for_team_name"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 0) LIMIT 1[0m
+Completed   in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find Player with ID=auto_complete_for_team_name):
+  app/controllers/players_controller.rb:19:in `show'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-22 14:48:11 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (3.5ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 165ms (Views: 43.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-22 14:48:19 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (23.6ms)[0m  [1mSELECT "players".* FROM "players"[0m
+Rendered players/index.html.erb within layouts/application (1421.0ms)
+Completed 200 OK in 1499ms (Views: 1426.5ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 14:48:33 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/_form.html.erb (15.2ms)
+Rendered players/edit.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 37ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 14:57:37 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1[0m
+Rendered players/_form.html.erb (36.4ms)
+Rendered players/edit.html.erb within layouts/application (37.9ms)
+Completed   in 54ms
+
+ActionView::Template::Error (undefined local variable or method `players_autocomplete_team_name_path' for #<#<Class:0x00000102f81fa8>:0x00000102f7fff0>):
+    24:     <%= f.text_field :position %>
+    25:   </div>
+    26:   <div class="field">
+    27: 	  <%= f.text_field :team_name, {:limit => 50}, :autocomplete => players_autocomplete_team_name_path %>
+    28:   </div>
+    29:   <div class="field">
+    30:     <%= f.label :team_abbreviation %><br />
+  app/views/players/_form.html.erb:27:in `block in _app_views_players__form_html_erb___395260446786354664_2172373380_3988186205239570649'
+  app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb___395260446786354664_2172373380_3988186205239570649'
+  app/views/players/edit.html.erb:3:in `_app_views_players_edit_html_erb__4122301704281433495_2172384700_2003511807690432374'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 14:59:02 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/_form.html.erb (10.0ms)
+Rendered players/edit.html.erb within layouts/application (11.5ms)
+Completed   in 65ms
+
+ActionView::Template::Error (wrong number of arguments (3 for 2)):
+    24:     <%= f.text_field :position %>
+    25:   </div>
+    26:   <div class="field">
+    27: 	  <%= f.text_field :team_name, {:limit => 50}, :autocomplete => autocomplete_team_name_players_path %>
+    28:   </div>
+    29:   <div class="field">
+    30:     <%= f.label :team_abbreviation %><br />
+  app/views/players/_form.html.erb:27:in `block in _app_views_players__form_html_erb___395260446786354664_2189678360_3988186205239570649'
+  app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb___395260446786354664_2189678360_3988186205239570649'
+  app/views/players/edit.html.erb:3:in `_app_views_players_edit_html_erb__4122301704281433495_2189688040_2003511807690432374'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 14:59:18 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1[0m
+Rendered players/_form.html.erb (12.4ms)
+Rendered players/edit.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 33ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at 2010-10-22 14:59:18 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (44.8ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:01:36 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/_form.html.erb (12.7ms)
+Rendered players/edit.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 34ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/javascripts/autocomplete-rails.js" for 127.0.0.1 at 2010-10-22 15:01:36 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/autocomplete-rails.js"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/javascripts/autocomplete-rails.js" for 127.0.0.1 at 2010-10-22 15:01:36 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/autocomplete-rails.js"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:02:30 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1[0m
+Rendered players/_form.html.erb (50.4ms)
+Rendered players/edit.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 71ms (Views: 59.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:06:09 -0600
+
+ActionController::RoutingError (undefined method `autocomplete' for PlayersController:Class):
+  app/controllers/players_controller.rb:3:in `<class:PlayersController>'
+  app/controllers/players_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:06:12 -0600
+
+ActionController::RoutingError (undefined method `autocomplete' for PlayersController:Class):
+  app/controllers/players_controller.rb:3:in `<class:PlayersController>'
+  app/controllers/players_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:06:49 -0600
+
+ActionController::RoutingError (undefined method `autocomplete' for PlayersController:Class):
+  app/controllers/players_controller.rb:3:in `<class:PlayersController>'
+  app/controllers/players_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:06:51 -0600
+
+ActionController::RoutingError (undefined method `autocomplete' for PlayersController:Class):
+  app/controllers/players_controller.rb:3:in `<class:PlayersController>'
+  app/controllers/players_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:12:37 -0600
+
+NameError (uninitialized constant PoweruxJquerySelectablelist):
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.7ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:14:44 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/_form.html.erb (16.4ms)
+Rendered players/edit.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 131ms (Views: 25.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players/autocomplete_team_name?term=c" for 127.0.0.1 at 2010-10-22 15:14:51 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"c"}
+  [1m[36mTeam Load (0.9ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'c%') ORDER BY name ASC LIMIT 10[0m
+Completed 200 OK in 41ms (Views: 6.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/players/autocomplete_team_name?term=ca" for 127.0.0.1 at 2010-10-22 15:14:53 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"ca"}
+  [1m[35mTeam Load (0.8ms)[0m  SELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'ca%') ORDER BY name ASC LIMIT 10
+Completed 200 OK in 22ms (Views: 6.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/players/451" for 127.0.0.1 at 2010-10-22 15:15:02 -0600
+  Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P+oofREpICr3/uvPnJwlRNGhUcJStoxL9ye5sBS/94I=", "player"=>{"sur_name"=>"Jokinen", "given_name"=>"Olli", "position"=>"(C)", "team_name"=>"Calgary Flames", "team_abbreviation"=>"FLA", "birth_date(1i)"=>"1978", "birth_date(2i)"=>"12", "birth_date(3i)"=>"5", "place_of_birth"=>"Kuopio, FIN"}, "commit"=>"Update Player", "id"=>"451"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1[0m
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams" WHERE ("teams"."name" = 'Calgary Flames') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "players" SET "updated_at" = '2010-10-22 21:15:02.591109' WHERE ("players"."id" = 451)[0m
+Redirected to http://localhost:3000/players/451
+Completed 302 Found in 103ms
+
+
+Started GET "/players/451" for 127.0.0.1 at 2010-10-22 15:15:02 -0600
+  Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"451"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 29ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:15:10 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1[0m
+Rendered players/_form.html.erb (12.7ms)
+Rendered players/edit.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 33ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/451/edit" for 127.0.0.1 at 2010-10-22 15:15:47 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"451"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 451) LIMIT 1
+Rendered players/_form.html.erb (12.9ms)
+Rendered players/edit.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 66ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/autocomplete_team_name?term=cal" for 127.0.0.1 at 2010-10-22 15:15:52 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"cal"}
+  [1m[36mTeam Load (0.7ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'cal%') ORDER BY name ASC LIMIT 10[0m
+Completed 200 OK in 21ms (Views: 6.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players/autocomplete_team_name?term=ca" for 127.0.0.1 at 2010-10-22 15:15:54 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"ca"}
+  [1m[35mTeam Load (0.8ms)[0m  SELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'ca%') ORDER BY name ASC LIMIT 10
+Completed 200 OK in 21ms (Views: 6.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players/autocomplete_team_name?term=a" for 127.0.0.1 at 2010-10-22 15:15:57 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[36mTeam Load (0.8ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'a%') ORDER BY name ASC LIMIT 10[0m
+Completed 200 OK in 21ms (Views: 6.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players/autocomplete_team_name?term=b" for 127.0.0.1 at 2010-10-22 15:15:59 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"b"}
+  [1m[35mTeam Load (0.8ms)[0m  SELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'b%') ORDER BY name ASC LIMIT 10
+Completed 200 OK in 21ms (Views: 6.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players/autocomplete_team_name?term=n" for 127.0.0.1 at 2010-10-22 15:16:01 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"n"}
+  [1m[36mTeam Load (1.0ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'n%') ORDER BY name ASC LIMIT 10[0m
+Completed 200 OK in 21ms (Views: 6.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players/autocomplete_team_name?term=ne" for 127.0.0.1 at 2010-10-22 15:16:04 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"ne"}
+  [1m[35mTeam Load (0.9ms)[0m  SELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'ne%') ORDER BY name ASC LIMIT 10
+Completed 200 OK in 22ms (Views: 6.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-22 16:38:29 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlayer Load (57.8ms)[0m  SELECT "players".* FROM "players"
+Rendered players/index.html.erb within layouts/application (1443.7ms)
+Completed 200 OK in 1609ms (Views: 1448.4ms | ActiveRecord: 58.2ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:38:37 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 37ms (Views: 4.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:42:46 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 26ms (Views: 12.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:44:51 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (38.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 61ms (Views: 12.1ms | ActiveRecord: 38.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:44:58 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 26ms (Views: 12.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:46:09 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 26ms (Views: 12.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:47:33 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (39.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 62ms (Views: 12.1ms | ActiveRecord: 39.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:50:31 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 26ms (Views: 12.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:52:04 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 27ms (Views: 12.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:52:33 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 63ms (Views: 13.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:52:34 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 27ms (Views: 13.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:53:23 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 27ms (Views: 12.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:53:24 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 63ms (Views: 12.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:53:25 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 26ms (Views: 12.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:59:32 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 27ms (Views: 13.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:59:33 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 63ms (Views: 13.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:59:34 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 62ms (Views: 48.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:59:51 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 16:59:53 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 27ms (Views: 12.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:05:56 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (46.4ms)
+Completed 200 OK in 63ms (Views: 48.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:08:07 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.5ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 26ms (Views: 12.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:08:17 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 26ms (Views: 12.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:08:18 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (40.0ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 64ms (Views: 13.5ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:09:49 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:09:51 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:09:52 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (40.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 64ms (Views: 13.6ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:11:39 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:12:08 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:12:09 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (40.1ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 64ms (Views: 14.1ms | ActiveRecord: 40.1ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:12:39 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:20:29 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 29ms (Views: 14.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:27:25 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 64ms (Views: 13.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:29:37 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 62ms (Views: 48.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:30:04 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:30:49 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 27ms (Views: 13.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:30:50 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 63ms (Views: 49.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:32:05 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.5ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:32:16 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 27ms (Views: 13.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:32:53 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (39.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 63ms (Views: 13.1ms | ActiveRecord: 39.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:32:55 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 28ms (Views: 13.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:33:19 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:33:21 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (40.1ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 64ms (Views: 13.7ms | ActiveRecord: 40.1ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:33:22 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:39:50 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 27ms (Views: 13.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:40:15 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (39.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 64ms (Views: 13.4ms | ActiveRecord: 39.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:40:25 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 28ms (Views: 13.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:41:02 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:41:04 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (39.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 63ms (Views: 13.1ms | ActiveRecord: 39.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:41:23 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 27ms (Views: 13.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:41:24 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:41:36 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (40.0ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 64ms (Views: 13.6ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:41:37 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 27ms (Views: 13.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:44:08 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 28ms (Views: 13.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:44:42 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 63ms (Views: 12.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:45:14 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 27ms (Views: 12.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:45:14 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:45:43 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 64ms (Views: 13.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:45:44 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 27ms (Views: 12.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:48:48 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:49:55 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 64ms (Views: 13.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 17:50:27 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.5ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 62ms (Views: 48.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 19:43:37 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 63ms (Views: 49.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 19:43:38 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 28ms (Views: 12.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 20:16:26 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 20:16:28 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (40.3ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 63ms (Views: 12.6ms | ActiveRecord: 40.3ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 20:48:19 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 27ms (Views: 12.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 20:49:03 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:15:40 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.1ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 29ms (Views: 14.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:24:33 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (40.0ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 63ms (Views: 13.0ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:24:53 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 31ms (Views: 14.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:29:52 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (37.3ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 62ms (Views: 12.9ms | ActiveRecord: 37.3ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:29:54 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:33:03 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 27ms (Views: 12.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:36:07 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 69ms (Views: 12.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:36:09 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 26ms (Views: 12.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:37:08 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 26ms (Views: 12.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:37:32 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 27ms (Views: 13.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-22 21:37:34 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 62ms (Views: 48.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-23 21:14:17 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (4.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 32ms (Views: 15.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-23 21:16:15 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 27ms (Views: 13.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 11:32:15 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 185ms (Views: 47.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 11:32:17 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 61ms (Views: 14.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 11:33:09 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (6.5ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 80ms (Views: 60.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 11:33:09 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 34ms (Views: 18.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 11:52:33 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 27ms (Views: 12.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:04:54 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (76.1ms)
+Completed 200 OK in 96ms (Views: 80.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:05:17 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 29ms (Views: 14.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:06:21 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 27ms (Views: 13.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:06:52 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 27ms (Views: 13.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:10:25 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 29ms (Views: 13.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:11:45 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (4.1ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 64ms (Views: 47.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 12:13:16 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 102ms (Views: 81.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:13:17 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (4.4ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 29ms (Views: 13.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:15:25 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 28ms (Views: 12.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:23:10 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 64ms (Views: 48.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:23:11 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 30ms (Views: 13.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:24:33 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 32ms (Views: 15.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:44:40 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 64ms (Views: 13.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:50:59 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 64ms (Views: 49.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:51:35 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:56:10 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 29ms (Views: 13.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:56:57 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (39.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 66ms (Views: 13.5ms | ActiveRecord: 39.2ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:58:45 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 31ms (Views: 14.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 12:59:37 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 29ms (Views: 14.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:03:02 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 28ms (Views: 13.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:04:02 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 63ms (Views: 47.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:04:10 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:05:07 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.1ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 29ms (Views: 13.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:06:18 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (38.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 63ms (Views: 13.2ms | ActiveRecord: 38.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:06:28 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.0ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 31ms (Views: 15.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:07:47 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 29ms (Views: 13.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:07:49 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 64ms (Views: 13.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:08:44 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (5.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 84ms (Views: 62.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:10:12 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:10:17 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:10:38 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (38.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 63ms (Views: 13.6ms | ActiveRecord: 38.5ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:42:37 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (4.0ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 66ms (Views: 50.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:43:24 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 32ms (Views: 16.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:43:59 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 30ms (Views: 14.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:45:48 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.1ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 70ms (Views: 52.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:47:15 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (4.0ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 38ms (Views: 14.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:48:22 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.7ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 29ms (Views: 13.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:49:04 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (46.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 79ms (Views: 15.7ms | ActiveRecord: 46.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 13:50:55 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 39ms (Views: 14.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 14:03:21 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 30ms (Views: 15.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 14:18:09 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (38.2ms)
+Completed   in 57ms
+
+ActionView::Template::Error (object[] naming but object param and @object var don't exist or don't respond to to_param: nil):
+    9: 		<%= submit_tag 'Remove', :name => 'right2left' %> <br />
+    10: 		<%= submit_tag 'Remove All', :name => 'right2left', :class => 'all' %> 
+    11: 	</div>
+    12: 	<%= hidden_field "selected_teams[]", "id", :class => 'selectablelist_ids' %>
+    13: 	<%= content_tag(:div, nil, :style => "clear:both" ) %>
+    14: </div>
+  app/views/teams/select.html.erb:12:in `_app_views_teams_select_html_erb__4309600003087360222_2170384520__2178703592096244348'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 14:18:47 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 65ms (Views: 49.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 14:19:48 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 14:29:39 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (4.1ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 29ms (Views: 14.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 14:34:17 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 65ms (Views: 13.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 14:40:31 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (4.0ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 65ms (Views: 50.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 14:49:47 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 27ms (Views: 13.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 15:26:04 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-27 15:26:09 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (4.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 101ms (Views: 43.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 15:26:17 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 70ms (Views: 55.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 15:29:03 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (41.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 185ms (Views: 47.3ms | ActiveRecord: 42.4ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-27 15:29:06 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 29ms (Views: 13.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 10.211.55.5 at 2010-10-27 16:26:58 -0600
+  Processing by TeamsController#index as */*
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (4.5ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 190ms (Views: 90.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/teams/select" for 10.211.55.5 at 2010-10-27 16:27:01 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 50ms (Views: 34.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 10.211.55.6 at 2010-10-27 16:28:47 -0600
+  Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (7.2ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 82ms (Views: 60.7ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/teams/select" for 10.211.55.6 at 2010-10-27 16:28:50 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (4.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 56ms (Views: 18.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/teams/select" for 10.211.55.6 at 2010-10-27 16:45:08 -0600
+  Processing by TeamsController#select as */*
+  [1m[35mTeam Load (4.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 35ms (Views: 18.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/welcome/autocomplete_player_given_name?term=N" for 127.0.0.1 at 2010-10-27 16:51:23 -0600
+
+ActionController::RoutingError (No route matches "/welcome/autocomplete_player_given_name"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/welcome/autocomplete_player_given_name?term=Ne" for 127.0.0.1 at 2010-10-27 16:51:24 -0600
+
+ActionController::RoutingError (No route matches "/welcome/autocomplete_player_given_name"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-28 11:27:36 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (73.1ms)
+Completed 200 OK in 164ms (Views: 76.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-28 11:27:39 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (36.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 61ms (Views: 13.6ms | ActiveRecord: 36.4ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-28 11:42:12 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (4.1ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 61ms (Views: 46.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-28 11:48:29 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (24.2ms)[0m  [1mSELECT "players".* FROM "players"[0m
+Rendered players/index.html.erb within layouts/application (1527.4ms)
+Completed 200 OK in 1617ms (Views: 1541.7ms | ActiveRecord: 24.2ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2010-10-28 11:48:34 -0600
+  Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE ("players"."id" = 1) LIMIT 1
+Rendered players/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/1/edit" for 127.0.0.1 at 2010-10-28 11:48:36 -0600
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE ("players"."id" = 1) LIMIT 1[0m
+Rendered players/_form.html.erb (17.4ms)
+Rendered players/edit.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 39ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/autocomplete_team_name?term=D" for 127.0.0.1 at 2010-10-28 11:48:43 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"D"}
+  [1m[35mTeam Load (0.8ms)[0m  SELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'd%') ORDER BY name ASC LIMIT 10
+Completed 200 OK in 58ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players/autocomplete_team_name?term=De" for 127.0.0.1 at 2010-10-28 11:48:45 -0600
+  Processing by PlayersController#autocomplete_team_name as JSON
+  Parameters: {"term"=>"De"}
+  [1m[36mTeam Load (0.8ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE (LOWER(name) LIKE 'de%') ORDER BY name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 7.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-28 11:48:49 -0600
+  Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (22.1ms)[0m  SELECT "players".* FROM "players"
+Rendered players/index.html.erb within layouts/application (1472.6ms)
+Completed 200 OK in 1583ms (Views: 1477.0ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-28 13:25:34 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (22.8ms)[0m  [1mSELECT "players".* FROM "players"[0m
+Rendered players/index.html.erb within layouts/application (3898.3ms)
+Completed   in 3968ms
+
+ActionView::Template::Error (undefined local variable or method `select_players_path' for #<#<Class:0x00000101d090d8>:0x00000101d06798>):
+    12: 			<li><%= link_to "Teams", teams_path %> </li>
+    13: 			<li><%= link_to "Players", players_path %> </li>
+    14: 			<li><%= link_to "Team Select", select_teams_path %> </li>
+    15: 			<li><%= link_to "Team Select", select_players_path %> </li>
+    16: 		</ul>
+    17: 	</nav>
+    18: 
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__1348216367836827476_2162694860__3113433115893406147'
+  app/controllers/players_controller.rb:12:in `index'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (340.4ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (346.4ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-28 13:26:05 -0600
+  Processing by PlayersController#index as HTML
+  [1m[35mPlayer Load (21.5ms)[0m  SELECT "players".* FROM "players"
+Rendered players/index.html.erb within layouts/application (1423.9ms)
+Completed 200 OK in 1491ms (Views: 1428.4ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-28 13:26:20 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (22.5ms)[0m  [1mSELECT "players".* FROM "players"[0m
+Rendered players/index.html.erb within layouts/application (1471.9ms)
+Completed 200 OK in 1540ms (Views: 1476.3ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 13:26:24 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 13:26:35 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[35mPlayer Load (2.4ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=al" for 127.0.0.1 at 2010-10-28 13:26:38 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'al%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 61ms (Views: 6.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=ale" for 127.0.0.1 at 2010-10-28 13:26:39 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"ale"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=alex" for 127.0.0.1 at 2010-10-28 13:26:40 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"alex"}
+  [1m[36mPlayer Load (2.0ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 6.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 13:40:50 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 13:41:06 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 13:41:37 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=ale" for 127.0.0.1 at 2010-10-28 14:10:19 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"ale"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 6.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 14:32:54 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-28 14:32:58 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 66ms (Views: 13.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 14:35:42 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 14:35:46 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[35mPlayer Load (2.3ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 6.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 14:36:06 -0600
+  Processing by PlayersController#select as HTML
+ERROR: compiling _app_views_players_select_html_erb__4493392404765600825_2176627240__3113433115893406147 RAISED /Users/lori/Projects/cr/powerux-jquery-selectablelist/app/views/players/select.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+..., :class => 'selectablelistleft' ) );@output_buffer.safe_con...
+...                               ^
+/Users/lori/Projects/cr/powerux-jquery-selectablelist/app/views/players/select.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+... :class => 'selectablelistright' ) );@output_buffer.safe_con...
+...                               ^
+/Users/lori/Projects/cr/powerux-jquery-selectablelist/app/views/players/select.html.erb:7: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+');@output_buffer.safe_concat('	<div class=\'selectablelistbuttons\'>
+                               	          ^
+Function body:           def _app_views_players_select_html_erb__4493392404765600825_2176627240__3113433115893406147(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "players/select";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+<h2>Player Select</h2>
+<div class="selectablelist">
+	');@output_buffer.append= ( text_field_tag 'match', 'Enter match text', :class => 'selectabletext' #, :autocomplete => autocomplete_player_given_name_players_path  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( select_tag( :my_players, nil, :multiple => true, :size => 6, :class => 'selectablelistleft' ) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( select_tag( :my_selected_players, nil, :multiple => true, :size => 6, :class => 'selectablelistright' ) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	<div class=\'selectablelistbuttons\'>
+		');@output_buffer.append= ( submit_tag 'Add', :name => 'left2right' );@output_buffer.safe_concat(' <br />
+		');@output_buffer.append= ( submit_tag 'Add All', :name => 'left2right', :class => 'all' );@output_buffer.safe_concat(' <br />
+		');@output_buffer.append= ( submit_tag 'Remove', :name => 'right2left' );@output_buffer.safe_concat(' <br />
+		');@output_buffer.append= ( submit_tag 'Remove All', :name => 'right2left', :class => 'all' );@output_buffer.safe_concat(' 
+');@output_buffer.safe_concat('	</div>
+	');@output_buffer.append= ( hidden_field_tag "selectable_list_ids[]", nil, :class => 'selectablelist_ids' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( content_tag(:div, nil, :style => "clear:both" ) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</div>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `module_eval'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `compile'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `block in render'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/lori/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__3327026605649398615__process_action__2890788927535850063__callbacks'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `block in action'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/lori/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/lori/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/lori/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered players/select.html.erb within layouts/application (1.1ms)
+Completed   in 6ms
+
+ActionView::Template::Error (/Users/lori/Projects/cr/powerux-jquery-selectablelist/app/views/players/select.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+..., :class => 'selectablelistleft' ) );@output_buffer.safe_con...
+...                               ^
+/Users/lori/Projects/cr/powerux-jquery-selectablelist/app/views/players/select.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+... :class => 'selectablelistright' ) );@output_buffer.safe_con...
+...                               ^
+/Users/lori/Projects/cr/powerux-jquery-selectablelist/app/views/players/select.html.erb:7: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+');@output_buffer.safe_concat('	<div class=\'selectablelistbuttons\'>
+                               	          ^):
+    2: <h2>Player Select</h2>
+    3: <div class="selectablelist">
+    4: 	<%= text_field_tag 'match', 'Enter match text', :class => 'selectabletext' #, :autocomplete => autocomplete_player_given_name_players_path  %>
+    5: 	<%= select_tag( :my_players, nil, :multiple => true, :size => 6, :class => 'selectablelistleft' ) %>
+    6: 	<%= select_tag( :my_selected_players, nil, :multiple => true, :size => 6, :class => 'selectablelistright' ) %>
+    7: 	<div class='selectablelistbuttons'>
+    8: 		<%= submit_tag 'Add', :name => 'left2right' %> <br />
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 14:36:27 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 14:36:32 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 6.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=al" for 127.0.0.1 at 2010-10-28 14:36:33 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'al%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 14:40:20 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 6.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Adam+Burish+" for 127.0.0.1 at 2010-10-28 14:40:28 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Adam Burish "}
+  [1m[35mPlayer Load (1.7ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'adam burish %') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 16ms (Views: 6.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 14:40:37 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 14:40:41 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 6.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=al" for 127.0.0.1 at 2010-10-28 14:40:42 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'al%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 7.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:31:15 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 16:31:18 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 24ms (Views: 6.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=al" for 127.0.0.1 at 2010-10-28 16:31:45 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'al%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 7.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:32:31 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 16:32:36 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 24ms (Views: 6.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=al" for 127.0.0.1 at 2010-10-28 16:32:41 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'al%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:33:34 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 16:33:38 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 24ms (Views: 6.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=al" for 127.0.0.1 at 2010-10-28 16:33:40 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'al%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 7.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=ale" for 127.0.0.1 at 2010-10-28 16:33:48 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"ale"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 62ms (Views: 7.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=alex" for 127.0.0.1 at 2010-10-28 16:33:52 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"alex"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:47:18 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Enter+match+text" for 127.0.0.1 at 2010-10-28 16:47:21 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Enter match text"}
+  [1m[36mPlayer Load (1.7ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'enter match text%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 16ms (Views: 6.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=A" for 127.0.0.1 at 2010-10-28 16:47:22 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"A"}
+  [1m[35mPlayer Load (2.2ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-28 16:47:23 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.0ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 6.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Ale" for 127.0.0.1 at 2010-10-28 16:47:49 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Ale"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 63ms (Views: 6.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:48:02 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 16:48:07 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[36mPlayer Load (2.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=al" for 127.0.0.1 at 2010-10-28 16:48:07 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'al%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 61ms (Views: 7.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:48:19 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:48:20 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Enter+a+text" for 127.0.0.1 at 2010-10-28 16:48:23 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Enter a text"}
+  [1m[36mPlayer Load (1.7ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'enter a text%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 54ms (Views: 6.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=a" for 127.0.0.1 at 2010-10-28 16:48:28 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"a"}
+  [1m[35mPlayer Load (2.3ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=al" for 127.0.0.1 at 2010-10-28 16:48:29 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'al%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=alex" for 127.0.0.1 at 2010-10-28 16:48:31 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"alex"}
+  [1m[35mPlayer Load (2.0ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 61ms (Views: 7.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=ale" for 127.0.0.1 at 2010-10-28 16:48:46 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"ale"}
+  [1m[36mPlayer Load (2.0ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 7.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:50:23 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=alex" for 127.0.0.1 at 2010-10-28 16:50:27 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"alex"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 62ms (Views: 7.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=ale" for 127.0.0.1 at 2010-10-28 16:50:35 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"ale"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 6.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:50:55 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:50:56 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Enter+match+text" for 127.0.0.1 at 2010-10-28 16:50:58 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Enter match text"}
+  [1m[35mPlayer Load (1.7ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'enter match text%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 16ms (Views: 6.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=A" for 127.0.0.1 at 2010-10-28 16:50:59 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"A"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 26ms (Views: 7.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-28 16:51:00 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 61ms (Views: 7.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Ale" for 127.0.0.1 at 2010-10-28 16:51:07 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Ale"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 24ms (Views: 7.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:53:15 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Enter+match+text" for 127.0.0.1 at 2010-10-28 16:53:18 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Enter match text"}
+  [1m[35mPlayer Load (1.7ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'enter match text%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 17ms (Views: 6.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Z" for 127.0.0.1 at 2010-10-28 16:53:19 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Z"}
+  [1m[36mPlayer Load (1.9ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'z%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 27ms (Views: 6.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Zlex" for 127.0.0.1 at 2010-10-28 16:53:20 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Zlex"}
+  [1m[35mPlayer Load (1.7ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'zlex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 16ms (Views: 6.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=" for 127.0.0.1 at 2010-10-28 16:53:22 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>""}
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=A" for 127.0.0.1 at 2010-10-28 16:53:23 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"A"}
+  [1m[36mPlayer Load (2.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 65ms (Views: 7.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-28 16:53:23 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.0ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Ale" for 127.0.0.1 at 2010-10-28 16:53:33 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Ale"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 24ms (Views: 6.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 16:56:58 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Enter+match+text" for 127.0.0.1 at 2010-10-28 16:57:01 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Enter match text"}
+  [1m[35mPlayer Load (1.8ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'enter match text%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 17ms (Views: 6.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-28 16:57:02 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.0ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 24ms (Views: 6.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Ale" for 127.0.0.1 at 2010-10-28 16:57:08 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Ale"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 28ms (Views: 7.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=P" for 127.0.0.1 at 2010-10-28 16:57:39 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"P"}
+  [1m[36mPlayer Load (2.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'p%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 25ms (Views: 7.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Pa" for 127.0.0.1 at 2010-10-28 16:57:39 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Pa"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'pa%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Pau" for 127.0.0.1 at 2010-10-28 16:57:40 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Pau"}
+  [1m[36mPlayer Load (2.0ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'pau%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 7.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-28 17:01:40 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.3ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 7.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Paul" for 127.0.0.1 at 2010-10-28 17:01:46 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Paul"}
+  [1m[36mPlayer Load (1.9ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'paul%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 6.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 10.211.55.6 at 2010-10-28 17:42:08 -0600
+  Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (48.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 115ms (Views: 54.7ms | ActiveRecord: 48.9ms)
+
+
+Started GET "/players/select" for 10.211.55.6 at 2010-10-28 17:42:11 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 10.211.55.6 at 2010-10-28 17:42:16 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 67ms (Views: 7.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 10.211.55.6 at 2010-10-28 17:42:57 -0600
+  Processing by PlayersController#select as */*
+Rendered players/select.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 10.211.55.6 at 2010-10-28 17:43:02 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.0ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Ale" for 10.211.55.6 at 2010-10-28 17:43:09 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Ale"}
+  [1m[36mPlayer Load (2.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 24ms (Views: 7.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 17:55:16 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-28 17:55:17 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2010-10-28 17:55:36 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 29ms (Views: 13.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-29 09:37:31 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-29 09:56:42 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Enter+match+text" for 127.0.0.1 at 2010-10-29 09:56:47 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Enter match text"}
+  [1m[36mPlayer Load (2.0ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'enter match text%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 18ms (Views: 6.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:49 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.3ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 76ms (Views: 7.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:50 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 33ms (Views: 10.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:51 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 7.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:52 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 62ms (Views: 6.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:53 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 6.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:53 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 26ms (Views: 7.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:54 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 63ms (Views: 6.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:55 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 24ms (Views: 7.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:56 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (3.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 37ms (Views: 9.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 09:56:57 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 88ms (Views: 9.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-29 10:01:15 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Enter+match+text" for 127.0.0.1 at 2010-10-29 10:01:19 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Enter match text"}
+  [1m[35mPlayer Load (1.7ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'enter match text%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 16ms (Views: 6.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=A" for 127.0.0.1 at 2010-10-29 10:01:19 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"A"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 23ms (Views: 7.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 10:01:20 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 7.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Paul" for 127.0.0.1 at 2010-10-29 10:01:29 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Paul"}
+  [1m[36mPlayer Load (2.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'paul%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 27ms (Views: 8.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=A" for 127.0.0.1 at 2010-10-29 10:01:50 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"A"}
+  [1m[35mPlayer Load (2.3ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 7.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 10:01:51 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 24ms (Views: 7.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-29 10:02:07 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Enter+match+text" for 127.0.0.1 at 2010-10-29 10:02:11 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Enter match text"}
+  [1m[35mPlayer Load (1.7ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'enter match text%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 16ms (Views: 6.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=A" for 127.0.0.1 at 2010-10-29 10:02:11 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"A"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 25ms (Views: 7.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Al" for 127.0.0.1 at 2010-10-29 10:02:11 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Al"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'al%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 7.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Ale" for 127.0.0.1 at 2010-10-29 10:02:16 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Ale"}
+  [1m[36mPlayer Load (3.0ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'ale%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 25ms (Views: 6.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-29 10:04:01 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-29 10:04:01 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Enter+match+text" for 127.0.0.1 at 2010-10-29 10:04:04 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Enter match text"}
+  [1m[35mPlayer Load (1.7ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'enter match text%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 16ms (Views: 6.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=A" for 127.0.0.1 at 2010-10-29 10:04:05 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"A"}
+  [1m[36mPlayer Load (3.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'a%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 30ms (Views: 8.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 10:04:06 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 26ms (Views: 7.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-29 10:04:09 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.1ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 29ms (Views: 11.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Paul" for 127.0.0.1 at 2010-10-29 10:04:12 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Paul"}
+  [1m[35mPlayer Load (2.2ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'paul%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 24ms (Views: 7.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Paul" for 127.0.0.1 at 2010-10-29 10:04:15 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Paul"}
+  [1m[36mPlayer Load (2.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'paul%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 27ms (Views: 6.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Paul" for 127.0.0.1 at 2010-10-29 10:04:19 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Paul"}
+  [1m[35mPlayer Load (2.1ms)[0m  SELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'paul%') ORDER BY given_name ASC LIMIT 10
+Completed 200 OK in 28ms (Views: 7.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-31 14:33:47 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTeam Load (3.6ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 177ms (Views: 44.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/players/select" for 127.0.0.1 at 2010-10-31 14:33:49 -0600
+  Processing by PlayersController#select as HTML
+Rendered players/select.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/autocomplete_player_given_name?term=Alex" for 127.0.0.1 at 2010-10-31 14:34:11 -0600
+  Processing by PlayersController#autocomplete_player_given_name as JSON
+  Parameters: {"term"=>"Alex"}
+  [1m[36mPlayer Load (2.4ms)[0m  [1mSELECT "players".* FROM "players" WHERE (LOWER(given_name) LIKE 'alex%') ORDER BY given_name ASC LIMIT 10[0m
+Completed 200 OK in 29ms (Views: 7.2ms | ActiveRecord: 2.4ms)

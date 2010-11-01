@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <%= stylesheet_link_tag 'application' %>
+        <title>Team Locations</title>
+        <%= raw(GMap.header) %>
+        <%= raw(@map.to_html) %>
+    </head>
+    <body>
+        <%= raw(@map.div(:width => 900, :height => 600 )) %>
+        <div id="roster" style="display:none">
+            <h2>Team:</h2>
+        </div>
+    </body>
+</html>

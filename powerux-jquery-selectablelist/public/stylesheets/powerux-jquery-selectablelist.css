@@ -1,0 +1,7 @@
+.selectablelist, .selectabletext, .selectablelistleft, .selectablelistright, .selectablelistbuttons { position: relative; }
+.selectabletext { float: left; clear: both; }
+.selectablelistleft { float: left; }
+.selectablelistbuttons { float: left; left-padding: 1em; right-padding: 1em; text-align: center; }
+.selectablelistbuttons input { width: 8em; }
+.selectablelist>select { width: 15em; }
+.selectablelist>select { width: auto; min-width: 15em; }

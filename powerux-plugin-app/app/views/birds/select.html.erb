@@ -1,0 +1,3 @@
+<%= multiselect_control_tag :a_name, options_from_collection_for_select(@birds, :id, :name) %>
+<br /><br />
+<%= autocomplete_multiselect_tag :bird, :name, autocomplete_bird_name_birds_path %>

@@ -1,0 +1,476 @@
+  Processing by PlayersController#index as HTML
+Rendered players/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#new as HTML
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 8ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{"these"=>"params"}}
+Redirected to http://test.host/players/1005
+Completed 302 Found in 53ms
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{}}
+Redirected to http://test.host/players/1006
+Completed 302 Found in 4ms
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{}}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"player"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players/1010
+Completed 302 Found in 3ms
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players/1011
+Completed 302 Found in 3ms
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/players
+Completed 302 Found in 1ms
+  Processing by PlayersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players
+Completed 302 Found in 2ms
+  Processing by TeamsController#index as HTML
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#new as HTML
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{"these"=>"params"}}
+Redirected to http://test.host/teams/1020
+Completed 302 Found in 8ms
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{}}
+Redirected to http://test.host/teams/1021
+Completed 302 Found in 44ms
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"team"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams/1025
+Completed 302 Found in 3ms
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams/1026
+Completed 302 Found in 3ms
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/teams
+Completed 302 Found in 1ms
+  Processing by TeamsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams
+Completed 302 Found in 2ms
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 14:33:42 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+Completed 200 OK in 60ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-15 14:33:42 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+Rendered players/_form.html.erb (15.1ms)
+Rendered players/_form.html.erb (5.8ms)
+Rendered teams/_form.html.erb (5.2ms)
+Rendered teams/_form.html.erb (4.4ms)
+  Processing by PlayersController#index as HTML
+Rendered players/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#new as HTML
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{"these"=>"params"}}
+Redirected to http://test.host/players/1005
+Completed 302 Found in 54ms
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{}}
+Redirected to http://test.host/players/1006
+Completed 302 Found in 6ms
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{}}
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"player"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players/1010
+Completed 302 Found in 3ms
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players/1011
+Completed 302 Found in 3ms
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/players
+Completed 302 Found in 1ms
+  Processing by PlayersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players
+Completed 302 Found in 3ms
+  Processing by TeamsController#index as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#new as HTML
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{"these"=>"params"}}
+Redirected to http://test.host/teams/1020
+Completed 302 Found in 9ms
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{}}
+Redirected to http://test.host/teams/1021
+Completed 302 Found in 43ms
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{}}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"team"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams/1025
+Completed 302 Found in 3ms
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams/1026
+Completed 302 Found in 3ms
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/teams
+Completed 302 Found in 1ms
+  Processing by TeamsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams
+Completed 302 Found in 2ms
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-15 14:37:06 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+Completed 200 OK in 55ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-15 14:37:06 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+Rendered players/_form.html.erb (14.3ms)
+Rendered players/_form.html.erb (5.1ms)
+Rendered teams/_form.html.erb (5.9ms)
+Rendered teams/_form.html.erb (47.9ms)
+  Processing by PlayersController#index as HTML
+Rendered players/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#new as HTML
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{"these"=>"params"}}
+Redirected to http://test.host/players/1005
+Completed 302 Found in 8ms
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{}}
+Redirected to http://test.host/players/1006
+Completed 302 Found in 3ms
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{"these"=>"params"}}
+Completed 200 OK in 39ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{}}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"player"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players/1010
+Completed 302 Found in 3ms
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players/1011
+Completed 302 Found in 3ms
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/players
+Completed 302 Found in 1ms
+  Processing by PlayersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players
+Completed 302 Found in 2ms
+  Processing by TeamsController#index as HTML
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#new as HTML
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{"these"=>"params"}}
+Redirected to http://test.host/teams/1020
+Completed 302 Found in 8ms
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{}}
+Redirected to http://test.host/teams/1021
+Completed 302 Found in 3ms
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{}}
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"team"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams/1025
+Completed 302 Found in 3ms
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams/1026
+Completed 302 Found in 3ms
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/teams
+Completed 302 Found in 1ms
+  Processing by TeamsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams
+Completed 302 Found in 2ms
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-22 11:37:42 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+Completed 200 OK in 53ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-22 11:37:43 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+Rendered players/_form.html.erb (51.2ms)
+Rendered players/_form.html.erb (5.1ms)
+Rendered teams/_form.html.erb (4.5ms)
+Rendered teams/_form.html.erb (3.3ms)
+  Processing by PlayersController#index as HTML
+Rendered players/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#new as HTML
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{"these"=>"params"}}
+Redirected to http://test.host/players/1005
+Completed 302 Found in 44ms
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{}}
+Redirected to http://test.host/players/1006
+Completed 302 Found in 3ms
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#create as HTML
+  Parameters: {"player"=>{}}
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"player"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players/1010
+Completed 302 Found in 3ms
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players/1011
+Completed 302 Found in 3ms
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by PlayersController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/players
+Completed 302 Found in 1ms
+  Processing by PlayersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/players
+Completed 302 Found in 2ms
+  Processing by TeamsController#index as HTML
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#new as HTML
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{"these"=>"params"}}
+Redirected to http://test.host/teams/1020
+Completed 302 Found in 8ms
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{}}
+Redirected to http://test.host/teams/1021
+Completed 302 Found in 43ms
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{"these"=>"params"}}
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#create as HTML
+  Parameters: {"team"=>{}}
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"team"=>{"these"=>"params"}, "id"=>"37"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams/1025
+Completed 302 Found in 3ms
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams/1026
+Completed 302 Found in 3ms
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  Processing by TeamsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/teams
+Completed 302 Found in 1ms
+  Processing by TeamsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/teams
+Completed 302 Found in 3ms
+
+
+Started GET "/players" for 127.0.0.1 at 2010-10-22 11:59:20 -0600
+  Processing by PlayersController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlayer Load (0.1ms)[0m  SELECT "players".* FROM "players"
+Completed 200 OK in 53ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2010-10-22 11:59:20 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+Rendered players/_form.html.erb (10.8ms)
+Rendered players/_form.html.erb (5.6ms)
+Rendered teams/_form.html.erb (4.4ms)
+Rendered teams/_form.html.erb (47.1ms)
