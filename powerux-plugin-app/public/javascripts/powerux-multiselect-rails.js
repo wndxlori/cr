@@ -54,7 +54,6 @@ $(function() {
 			if ( items.length ) {
 			    items = this._normalize( items );
 			}
-			alert($(this.element[0]));     
 			var div_parent = $(this.element[0]).parent();  
 			// Empty match list and refill with response items
 			var match_select = div_parent.find('select.multiselectmatch');

@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 <h2>Team Select</h2>
 <div class="selectablelist">
-	<%= select_tag( :my_teams, options_from_collection_for_select(@teams, :id, :name), :multiple => true, :size => 6, :class => 'selectablelistleft' ) %>
-	<%= select_tag( :my_selected_teams, nil, :multiple => true, :size => 6, :class => 'selectablelistright' ) %>
+	<%= select_tag( :my_teams, 
+					options_from_collection_for_select(@teams, :id, :name), 
+					:multiple => true, :size => 6, :class => 'selectablelistleft' ) %>
+	<%= select_tag( :my_selected_teams, nil, 
+					:multiple => true, :size => 6, :class => 'selectablelistright' ) %>
 	<div class='selectablelistbuttons'>
 		<%= submit_tag 'Add', :name => 'left2right' %> <br />
 		<%= submit_tag 'Add All', :name => 'left2right', :class => 'all' %> <br />
