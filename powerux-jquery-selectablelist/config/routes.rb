@@ -5,6 +5,7 @@ PoweruxJquerySelectablelist::Application.routes.draw do
   resources :teams do
     get 'locate', :on => :collection 
     get 'select', :on => :collection
+    post 'selected', :on => :collection
   end
 
   resources :players do

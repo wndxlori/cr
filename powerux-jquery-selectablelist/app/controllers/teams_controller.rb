@@ -12,6 +12,11 @@ class TeamsController < ApplicationController
       @teams = Team.all
     end
 
+    def selected
+      flash[:notice] = params.inspect
+      redirect_to :action => 'index'
+    end
+
   # GET /teams
   # GET /teams.xml
   def index

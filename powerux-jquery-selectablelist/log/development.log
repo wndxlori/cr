@@ -1,0 +1,165 @@
+
+
+Started GET "/teams/" for 127.0.0.1 at 2011-09-08 14:46:25 -0600
+
+ActionController::RoutingError (No route matches "/teams"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/teams/" for 127.0.0.1 at 2011-09-08 14:47:50 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (34.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 171ms (Views: 43.6ms | ActiveRecord: 34.5ms)
+
+
+Started GET "/teams/1" for 127.0.0.1 at 2011-09-08 14:47:58 -0600
+  Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 1 LIMIT 1[0m
+Rendered teams/show.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 58ms (Views: 46.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2011-09-08 14:48:02 -0600
+  Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (3.8ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (73.3ms)
+Completed 200 OK in 89ms (Views: 75.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2011-09-08 14:48:05 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 26ms (Views: 13.8ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/teams/selected" for 127.0.0.1 at 2011-09-08 14:48:22 -0600
+
+ActionController::RoutingError (No route matches "/teams/selected"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/teams/locate" for 127.0.0.1 at 2011-09-08 14:49:43 -0600
+  Processing by TeamsController#locate as HTML
+  [1m[35mTeam Load (0.8ms)[0m  SELECT name, latitude, longitude FROM "teams"
+Rendered teams/locate.html.erb (0.8ms)
+Completed 200 OK in 20ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2011-09-08 14:49:43 -0600
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css"):
+  
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 14:56:26 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (38.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 89ms (Views: 40.6ms | ActiveRecord: 38.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2011-09-08 14:56:29 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (4.2ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 65ms (Views: 52.0ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/teams/selected" for 127.0.0.1 at 2011-09-08 14:56:37 -0600
+  Processing by TeamsController#selected as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r/HlG1C3VPTT3E896elBfcSumszroOnSvPmA+LptZ5Q=", "commit"=>"Pick!"}
+Rendered teams/index.html.erb within layouts/application (24.5ms)
+Completed   in 28ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    12:     <th></th>
+    13:   </tr>
+    14: 
+    15: <% @teams.each do |team| %>
+    16:   <tr>
+    17:     <td><%= team.name %></td>
+    18:     <td><%= team.abbreviation %></td>
+  app/views/teams/index.html.erb:15:in `_app_views_teams_index_html_erb__1659047154781322620_2176990620__987135075114597951'
+  app/controllers/teams_controller.rb:16:in `selected'
+
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/lori/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started POST "/teams/selected" for 127.0.0.1 at 2011-09-08 14:57:08 -0600
+  Processing by TeamsController#selected as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r/HlG1C3VPTT3E896elBfcSumszroOnSvPmA+LptZ5Q=", "commit"=>"Pick!"}
+Redirected to http://localhost:3000/?notice=%7B%22utf8%22%3D%3E%22%E2%9C%93%22%2C+%22authenticity_token%22%3D%3E%22r%2FHlG1C3VPTT3E896elBfcSumszroOnSvPmA%2BLptZ5Q%3D%22%2C+%22commit%22%3D%3E%22Pick%21%22%2C+%22action%22%3D%3E%22selected%22%2C+%22controller%22%3D%3E%22teams%22%7D
+Completed 302 Found in 1ms
+
+
+Started GET "/?notice=%7B%22utf8%22%3D%3E%22%E2%9C%93%22%2C+%22authenticity_token%22%3D%3E%22r%2FHlG1C3VPTT3E896elBfcSumszroOnSvPmA%2BLptZ5Q%3D%22%2C+%22commit%22%3D%3E%22Pick%21%22%2C+%22action%22%3D%3E%22selected%22%2C+%22controller%22%3D%3E%22teams%22%7D" for 127.0.0.1 at 2011-09-08 14:57:08 -0600
+  Processing by TeamsController#index as HTML
+  Parameters: {"notice"=>"{\"utf8\"=>\"✓\", \"authenticity_token\"=>\"r/HlG1C3VPTT3E896elBfcSumszroOnSvPmA+LptZ5Q=\", \"commit\"=>\"Pick!\", \"action\"=>\"selected\", \"controller\"=>\"teams\"}"}
+  [1m[36mTeam Load (3.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 59ms (Views: 45.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2011-09-08 14:58:45 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.7ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 27ms (Views: 14.5ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/teams/selected" for 127.0.0.1 at 2011-09-08 14:58:51 -0600
+  Processing by TeamsController#selected as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r/HlG1C3VPTT3E896elBfcSumszroOnSvPmA+LptZ5Q=", "commit"=>"Pick!"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 14:58:51 -0600
+  Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (43.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/index.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 104ms (Views: 45.8ms | ActiveRecord: 43.8ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2011-09-08 14:59:17 -0600
+  Processing by TeamsController#select as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/select.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 63ms (Views: 50.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams/select" for 127.0.0.1 at 2011-09-08 15:00:12 -0600
+  Processing by TeamsController#select as HTML
+  [1m[36mTeam Load (3.9ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+Rendered teams/select.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 26ms (Views: 13.8ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/teams/selected" for 127.0.0.1 at 2011-09-08 15:00:20 -0600
+  Processing by TeamsController#selected as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r/HlG1C3VPTT3E896elBfcSumszroOnSvPmA+LptZ5Q=", "selectable_list_ids"=>["1,4,5"], "commit"=>"Pick!"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 15:00:20 -0600
+  Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (3.9ms)[0m  SELECT "teams".* FROM "teams"
+Rendered teams/index.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 65ms (Views: 51.8ms | ActiveRecord: 3.9ms)
