@@ -37,7 +37,7 @@ $(function() {
 		selectable_list.find("select.selectablelistright option").each(function(){
 			selected_ids.push($(this).val());
 		});
-		selectable_list.find('input:hidden').val(selected_ids.join(','));
+		selectable_list.find('input.selectablelist_ids').val(selected_ids.join(','));
 		
 		// to remove items not matching filter
 		$('.selectabletext').autocomplete("search");
