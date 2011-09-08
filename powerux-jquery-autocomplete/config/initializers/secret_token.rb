@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-PoweruxJqueryAutocomplete::Application.config.secret_token = '442cfa0cbad54a00a5c35dccd19239c5855d227550b80ea364815562dcb6c1374e859e61ac3a85f342054a565486e3ff824ca9a9572fd44efae6785710977e5e'
+PoweruxJqueryAutocomplete::Application.config.secret_token = '02560a7424af3ed3d059bb1531fd1b75352de613bec75e41f6059a3bd23fe399162f5e9765f55461ccf644a3ff3d4da0c22f828fb9ab223e787b6a242ba5e7bd'
