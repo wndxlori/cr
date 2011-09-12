@@ -5,3 +5,7 @@
 .multiselectbuttons input { width: 8em; }
 .multiselect>select { width: 15em; }
 .multiselect>select { width: auto; min-width: 15em; }
+
+.ui-autocomplete-loading {
+    background: white url('../images/powerux/multiselect-busy.gif') right center no-repeat;
+}

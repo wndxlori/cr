@@ -43,7 +43,7 @@ module ActionView
         buttons = content_tag( :div, raw(button_tags.join(tag(:br))), :class => 'multiselectbuttons')
 
         selects = []
-        selects << text_field_tag( 'match', match || 'Enter match text', options.merge(:class => 'multiselecttext')) unless source.nil?
+        selects << text_field_tag( 'match', match, options.merge(:class => 'multiselecttext', :placeholder => 'Enter match text')) unless source.nil?
         selects << select_tag( name.to_s + "_match", values, select_match_options)
         selects << select_tag( name.to_s + "_selected", nil, select_selected_options)
         selects << buttons

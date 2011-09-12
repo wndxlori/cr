@@ -1,7 +1,7 @@
 /*
 * Unobtrusive multiselect with autocomplete
 *
-* To use it, you just have to include the HTML attribute multiselect
+* To use it, you just have to include the HTML attribute data-multiselect
 * with the autocomplete URL as the value
 *
 */
@@ -51,10 +51,10 @@ $(function() {
 	    })      
 	    .data( "autocomplete" )._response = function( items ) {
 			// From original
-			if ( items.length ) {
-			    items = this._normalize( items );
-			}
-			var div_parent = $(this.element[0]).parent();  
+            if ( items && items.length ) {
+                items = this._normalize( items );
+            }
+			var div_parent = $(this.element[0]).parent();
 			// Empty match list and refill with response items
 			var match_select = div_parent.find('select.multiselectmatch');
 			match_select.empty();
@@ -69,6 +69,7 @@ $(function() {
 			div_parent.find('select.multiselectselected option').each(function(index, item){
 				match_select.find("option[value='" + $(this).val() + "']").remove();
 			});
+            this.element.removeClass( "ui-autocomplete-loading" );
 	    };
 	});
 });

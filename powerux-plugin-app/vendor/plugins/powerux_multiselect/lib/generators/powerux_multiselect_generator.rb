@@ -7,7 +7,8 @@ class PoweruxMultiselectGenerator < Rails::Generators::Base
   
   def install
     # Copy the unobtrusive JS file
-    copy_file('powerux-multiselect.css', 'public/stylesheets/powerux-multiselect.css')
+    copy_file('powerux-multiselect-busy.gif', 'public/images/powerux/multiselect-busy.gif')
+    copy_file('powerux-multiselect.css', 'public/stylesheets/powerux/multiselect.css')
     copy_file('powerux-multiselect-rails.js', 'public/javascripts/powerux-multiselect-rails.js')
   end
   
@@ -19,7 +20,7 @@ class PoweruxMultiselectGenerator < Rails::Generators::Base
   #            :collision => :ask
   # 
   #     m.file 'powerux-multiselect.css',
-  #            'public/stylesheets/powerux-multiselect.css',
+  #            'public/stylesheets/powerux/multiselect.css',
   #            :collision => :ask
   #   end
   # end
